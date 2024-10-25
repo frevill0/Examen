@@ -20,7 +20,7 @@ export class Tab1Page {
   }
 
   irAGithub() {
-    window.open('https://github.com/frevill0', '_blank'); 
+    window.open('https://web.whatsapp.com/', '_blank'); 
   }
 
   handleReorder(ev: CustomEvent<ItemReorderEventDetail>) {
