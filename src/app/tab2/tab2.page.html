@@ -1,23 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Mis Proyectos</ion-title>
+    <ion-title>Mi Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
   <ion-card id="perfil">
-    <ion-item>
-      <ion-thumbnail slot="start" class="custom-thumbnail" >
-        <img src="assets/freddycv.JPEG" alt="Foto de Freddy">
+    <div class="thumbnail-container">
+      <ion-thumbnail class="custom-thumbnail">
+        <img src="assets/gitProfile.JPEG" alt="Foto de Freddy">
       </ion-thumbnail>
-    </ion-item>
+    </div>
+    
+    <div class="button-container">
+      <ion-button 
+        expand="full" 
+        color="success" 
+        shape="round" 
+        (click)="irAGithub()" 
+        class="hover-button">
+        <ion-icon slot="start" name="logo-github"></ion-icon>
+        Ir a GitHub
+      </ion-button>
+    </div>
   </ion-card>
-
-<ion-button 
-  expand="full" 
-  color="primary" 
-  shape="round" 
-  (click)="irAGithub()">
-  <ion-icon slot="start" name="logo-github"></ion-icon>
-  Ir a GitHub
-</ion-button>
+</ion-content>

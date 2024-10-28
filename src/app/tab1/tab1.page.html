@@ -6,7 +6,7 @@
 
 <ion-content>
 
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar placeholder="Buscar..."></ion-searchbar>
 
   <ion-card id="perfil">
     <ion-item>
@@ -14,10 +14,8 @@
         <ion-card-title>Freddy Villavicencio</ion-card-title>
         <ion-card-subtitle>Desarrollador de Software</ion-card-subtitle>
         <ion-card-content>
-          Hola! mi nombre es Freddy Antonio Villavicencio Rosendo, naci el 2 de deiciembre del 2002 en la ciudad de Cali - Colombia, 
-          a lo largo de mi vida he sido un chico apasionado y curioso, cuando tenia 15 me di cuenta de mis habilidades para reparar cosas (que muchas veces yo mismo destruía) y a la vez 
-          me empezo a gustar bastante el mundo de la tecnología. No fue hasta los 18 que me di cuenta que queria ser programador y ahora me encuentro estudiando 
-          y trabajando cada dia para llegar a cumplir ese sueño. 
+          Hola! mi nombre es Freddy Antonio Villavicencio Rosendo, nací el 2 de diciembre del 2002 en la ciudad de Cali - Colombia. 
+          A lo largo de mi vida he sido un chico apasionado y curioso. 
         </ion-card-content>
       </ion-label>
     </ion-item>
@@ -46,40 +44,35 @@
       <ion-card-title>Experiencia Profesional</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-  
-      <!-- Técnico en ECU 911 -->
       <ion-card>
         <ion-card-header>
           <ion-card-title>Técnico de Soporte</ion-card-title>
           <ion-card-subtitle>ECU 911</ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
-          2024 - Realicé mantenimiento y soporte técnico para equipos de comunicación y emergencias. Asistí en la implementación de soluciones tecnológicas para mejorar la eficiencia operativa, asegurando el funcionamiento ininterrumpido del sistema de emergencias.
+          2024 - Realicé mantenimiento y soporte técnico para equipos de comunicación y emergencias.
         </ion-card-content>
       </ion-card>
 
-            <!-- Trabajador en La Salerosa -->
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title>Mesero</ion-card-title>
-                <ion-card-subtitle>Restaurante La Salerosa</ion-card-subtitle>
-              </ion-card-header>
-              <ion-card-content>
-                2022 - 2023 - Proporcioné un servicio al cliente excepcional, gestionando pedidos y asegurando una experiencia agradable para los comensales. Colaboré en la coordinación de eventos especiales, optimizando la eficiencia del servicio.
-              </ion-card-content>
-            </ion-card>
-  
-      <!-- Desarrollador en Quito Tennis y Golf Club -->
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Mesero</ion-card-title>
+          <ion-card-subtitle>Restaurante La Salerosa</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          2022 - 2023 - Proporcioné un servicio al cliente excepcional.
+        </ion-card-content>
+      </ion-card>
+
       <ion-card>
         <ion-card-header>
           <ion-card-title>Desarrollador de Software</ion-card-title>
           <ion-card-subtitle>Quito Tennis y Golf Club</ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
-          2024 - Actualidad - Estoy a cargo del diseño y desarrollo de aplicaciones web para los diferentes departamentos. Trabajo en la implementación de soluciones para el cálculo de totales a pagar por los socios, manejo de usuarios y generación de reportes. Colaboro en el mantenimiento y mejora continua de la infraestructura tecnológica del club.
+          2024 - Actualidad - Estoy a cargo del diseño y desarrollo de aplicaciones web.
         </ion-card-content>
       </ion-card>
-      
     </ion-card-content>
   </ion-card>
 
@@ -115,43 +108,52 @@
       <ion-card-title>Habilidades</ion-card-title>
     </ion-card-header>
     <ion-list>
-      <ion-reorder-group [disabled]="false" (ionItemReorder)="handleReorder($any($event))">
-        <ion-item>
-          <ion-label>Comunicación Efectiva</ion-label>
-          <ion-reorder slot="end">
-            <ion-icon name="chatbubbles"></ion-icon>
-          </ion-reorder>
-        </ion-item>
-  
-        <ion-item>
-          <ion-label>Gestión de Proyectos</ion-label>
-          <ion-reorder slot="end">
-            <ion-icon name="clipboard"></ion-icon>
-          </ion-reorder>
-        </ion-item>
-  
-        <ion-item>
-          <ion-label>Desarrollo Ágil</ion-label>
-          <ion-reorder slot="end">
-            <ion-icon name="speedometer"></ion-icon>
-          </ion-reorder>
-        </ion-item>
-  
-        <ion-item>
-          <ion-label>Adaptabilidad</ion-label>
-          <ion-reorder slot="end">
-            <ion-icon name="sync"></ion-icon>
-          </ion-reorder>
-        </ion-item>
-  
-        <ion-item>
-          <ion-label>Atención al Cliente</ion-label>
-          <ion-reorder slot="end">
-            <ion-icon name="people"></ion-icon>
-          </ion-reorder>
-        </ion-item>
-      </ion-reorder-group>
+      <ion-item>
+        <ion-label>Comunicación Efectiva</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Gestión de Proyectos</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Desarrollo Ágil</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Adaptabilidad</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Atención al Cliente</ion-label>
+      </ion-item>
     </ion-list>
+  </ion-card>
+
+  <ion-card id="proyectos">
+    <ion-card-header>
+      <ion-card-title>Proyectos Destacados</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Aplicación Web para Gestión de Socios</ion-label>
+        <ion-note slot="end">2024</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>Plataforma de Reportes Financieros</ion-label>
+        <ion-note slot="end">2024</ion-note>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card id="logros">
+    <ion-card-header>
+      <ion-card-title>Logros</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Certificación en Desarrollo de Aplicaciones Web</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Reconocimiento en el ECU 911 por Soporte Técnico Excepcional</ion-label>
+      </ion-item>
+    </ion-card-content>
   </ion-card>
 
   <ion-card id="referencias">
@@ -183,13 +185,13 @@
   </ion-fab-button>
   <ion-fab-list side="top">
     <ion-fab-button (click)="abrirPopup('skills')">
-      <ion-icon name="star"></ion-icon>  <!-- Icono para habilidades -->
+      <ion-icon name="star"></ion-icon>
     </ion-fab-button>
     <ion-fab-button (click)="abrirPopup('experience')">
-      <ion-icon name="briefcase"></ion-icon>  <!-- Icono para experiencia laboral -->
+      <ion-icon name="briefcase"></ion-icon>
     </ion-fab-button>
     <ion-fab-button (click)="abrirPopup('education')">
-      <ion-icon name="school"></ion-icon>  <!-- Icono para educación -->
+      <ion-icon name="school"></ion-icon>
     </ion-fab-button>
   </ion-fab-list>
 </ion-fab>
@@ -209,5 +211,5 @@
   shape="round" 
   (click)="irAGithub()">
   <ion-icon name="logo-whatsapp"></ion-icon>
-      Contactame
+  Contáctame
 </ion-button>

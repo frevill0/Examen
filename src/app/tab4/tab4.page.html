@@ -1,53 +1,46 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Calculadora
-    </ion-title>
+    <ion-title>Días entre Fechas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-grid>
     <ion-row>
-      <ion-col size="12">
+      <ion-col size="6" class="calendar-container">
         <ion-item>
-          <ion-label position="floating">Resultado</ion-label>
-          <ion-input [(ngModel)]="input" readonly></ion-input>
+          <ion-label position="floating">Fecha de Inicio</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="startDate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="6" class="calendar-container">
+        <ion-item>
+          <ion-label position="floating">Fecha de Fin</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="endDate"></ion-datetime>
         </ion-item>
       </ion-col>
     </ion-row>
 
-    <!-- Filas de números y operadores -->
     <ion-row>
-      <ion-col><ion-button expand="block" (click)="addToInput('7')">7</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('8')">8</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('9')">9</ion-button></ion-col>
-      <ion-col><ion-button expand="block" color="tertiary" (click)="addToInput('/')">/</ion-button></ion-col>
+      <ion-col size="12">
+        <ion-button expand="full" color="success" (click)="calculateDays()">Calcular Días</ion-button>
+      </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col><ion-button expand="block" (click)="addToInput('4')">4</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('5')">5</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('6')">6</ion-button></ion-col>
-      <ion-col><ion-button expand="block" color="tertiary" (click)="addToInput('*')">*</ion-button></ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Días Entre</ion-label>
+          <ion-input [(ngModel)]="daysDifference" readonly></ion-input>
+        </ion-item>
+      </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col><ion-button expand="block" (click)="addToInput('1')">1</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('2')">2</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('3')">3</ion-button></ion-col>
-      <ion-col><ion-button expand="block" color="tertiary" (click)="addToInput('-')">-</ion-button></ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col><ion-button expand="block" (click)="addToInput('0')">0</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('.')">.</ion-button></ion-col>
-      <ion-col><ion-button expand="block" color="success" (click)="calculate()">=</ion-button></ion-col>
-      <ion-col><ion-button expand="block" color="tertiary" (click)="addToInput('+')">+</ion-button></ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="12"><ion-button expand="block" color="danger" (click)="clear()">C</ion-button></ion-col>
+      <ion-col size="12">
+        <ion-button expand="full" color="danger" (click)="clear()">Limpiar</ion-button>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

@@ -1,123 +1,62 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Calculadora de raices cuadraticas
-    </ion-title>
+    <ion-title>Calculadora de Raíces Cuadráticas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-grid>
+    <!-- Entrada para 'a' -->
     <ion-row>
       <ion-col size="12">
         <ion-item>
-          <ion-label position="floating">a</ion-label>
-          <ion-input [(ngModel)]="input" readonly></ion-input>
+          <ion-label position="floating">Coeficiente a</ion-label>
+          <ion-input [(ngModel)]="input" type="number" placeholder="Ingrese 'a'"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
 
-    <!-- Filas de números y operadores -->
+    <!-- Entrada para 'b' -->
     <ion-row>
-      <ion-col><ion-button expand="block" (click)="addToInput('7')">7</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('8')">8</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('9')">9</ion-button></ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Coeficiente b</ion-label>
+          <ion-input [(ngModel)]="input1" type="number" placeholder="Ingrese 'b'"></ion-input>
+        </ion-item>
+      </ion-col>
     </ion-row>
 
+    <!-- Entrada para 'c' -->
     <ion-row>
-      <ion-col><ion-button expand="block" (click)="addToInput('4')">4</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('5')">5</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('6')">6</ion-button></ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Coeficiente c</ion-label>
+          <ion-input [(ngModel)]="input2" type="number" placeholder="Ingrese 'c'"></ion-input>
+        </ion-item>
+      </ion-col>
     </ion-row>
 
+    <!-- Botón para calcular -->
     <ion-row>
-      <ion-col><ion-button expand="block" (click)="addToInput('1')">1</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('2')">2</ion-button></ion-col>
-      <ion-col><ion-button expand="block" (click)="addToInput('3')">3</ion-button></ion-col>
+      <ion-col>
+        <ion-button expand="block" color="success" (click)="calculate()">Calcular</ion-button>
+      </ion-col>
     </ion-row>
-
+    
+    <!-- Resultados -->
     <ion-row>
-      <ion-col><ion-button expand="block" (click)="addToInput('0')">0</ion-button></ion-col>
-    </ion-row>
-
-    <ion-grid>
-      <ion-row>
-        <ion-col size="12">
-          <ion-item>
-            <ion-label position="floating">b</ion-label>
-            <ion-input [(ngModel)]="input1" readonly></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-  
-      <!-- Filas de números y operadores -->
-      <ion-row>
-        <ion-col><ion-button expand="block" (click)="addToInput1('7')">7</ion-button></ion-col>
-        <ion-col><ion-button expand="block" (click)="addToInput1('8')">8</ion-button></ion-col>
-        <ion-col><ion-button expand="block" (click)="addToInput1('9')">9</ion-button></ion-col>
-      </ion-row>
-  
-      <ion-row>
-        <ion-col><ion-button expand="block" (click)="addToInput1('4')">4</ion-button></ion-col>
-        <ion-col><ion-button expand="block" (click)="addToInput1('5')">5</ion-button></ion-col>
-        <ion-col><ion-button expand="block" (click)="addToInput1('6')">6</ion-button></ion-col>
-      </ion-row>
-  
-      <ion-row>
-        <ion-col><ion-button expand="block" (click)="addToInput1('1')">1</ion-button></ion-col>
-        <ion-col><ion-button expand="block" (click)="addToInput1('2')">2</ion-button></ion-col>
-        <ion-col><ion-button expand="block" (click)="addToInput1('3')">3</ion-button></ion-col>
-      </ion-row>
-  
-      <ion-row>
-        <ion-col><ion-button expand="block" (click)="addToInput('0')">0</ion-button></ion-col>
-      </ion-row>
-
-      <ion-grid>
-        <ion-row>
-          <ion-col size="12">
-            <ion-item>
-              <ion-label position="floating">c</ion-label>
-              <ion-input [(ngModel)]="input2" readonly></ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-    
-        <!-- Filas de números y operadores -->
-        <ion-row>
-          <ion-col><ion-button expand="block" (click)="addToInput2('7')">7</ion-button></ion-col>
-          <ion-col><ion-button expand="block" (click)="addToInput2('8')">8</ion-button></ion-col>
-          <ion-col><ion-button expand="block" (click)="addToInput2('9')">9</ion-button></ion-col>
-        </ion-row>
-    
-        <ion-row>
-          <ion-col><ion-button expand="block" (click)="addToInput2('4')">4</ion-button></ion-col>
-          <ion-col><ion-button expand="block" (click)="addToInput2('5')">5</ion-button></ion-col>
-          <ion-col><ion-button expand="block" (click)="addToInput2('6')">6</ion-button></ion-col>
-        </ion-row>
-    
-        <ion-row>
-          <ion-col><ion-button expand="block" (click)="addToInput2('1')">1</ion-button></ion-col>
-          <ion-col><ion-button expand="block" (click)="addToInput2('2')">2</ion-button></ion-col>
-          <ion-col><ion-button expand="block" (click)="addToInput2('3')">3</ion-button></ion-col>
-        </ion-row>
-    
-        <ion-row>
-          <ion-col><ion-button expand="block" (click)="addToInput2('0')">0</ion-button></ion-col>
-        </ion-row>
-
-    <ion-row>
-      <ion-col><ion-button expand="block" color="success" (click)="calculate()">=</ion-button></ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Resultado 1</ion-label>
+          <ion-input [(ngModel)]="input3" readonly></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Resultado 2</ion-label>
+          <ion-input [(ngModel)]="input4" readonly></ion-input>
+        </ion-item>
+      </ion-col>
     </ion-row>
   </ion-grid>
-
-  <ion-item>
-    <ion-label position="floating">Resultado 1</ion-label>
-    <ion-input [(ngModel)]="input3" readonly></ion-input>
-  </ion-item>
-  
-  <ion-item>
-    <ion-label position="floating">Resultado 2</ion-label>
-    <ion-input [(ngModel)]="input4" readonly></ion-input>
-  </ion-item>
-
+</ion-content>

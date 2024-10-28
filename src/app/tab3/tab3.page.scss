@@ -1,9 +1,26 @@
-ion-content {
-    --background: #ffffff;
-  }
-  
-  ion-input {
-    text-align: right;
-    font-size: 1.5rem;
-  }
-  
+ion-header, ion-footer {
+  background-color: #3f51b5; /* Color del encabezado y pie de página */
+  color: white;
+}
+
+ion-item {
+  --background: rgba(255, 255, 255, 0.8);
+  --border-radius: 10px;
+}
+
+ion-button {
+  --background: #4caf50; /* Color del botón */
+  --color: white;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
+ion-button:hover {
+  --background: #388e3c; /* Color del botón al pasar el cursor */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
