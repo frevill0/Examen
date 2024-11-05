@@ -16,6 +16,9 @@ Este es el repositorio de la aplicación **App Mejorada**, una versión mejorada
 
 A continuación se presentan las capturas de pantalla de la nueva versión de la aplicación. 
 
+![image](https://github.com/user-attachments/assets/d48169a4-28cd-41be-aa76-e24810748a4c)
+
+
 
 ---
 
