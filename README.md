@@ -18,6 +18,7 @@ A continuación se presentan las capturas de pantalla de la nueva versión de la
 
 ![image](https://github.com/user-attachments/assets/d48169a4-28cd-41be-aa76-e24810748a4c)
 
+![image](https://github.com/user-attachments/assets/3ebbb671-2c6d-4720-99f2-1c31f16f6238)
 
 
 ---
